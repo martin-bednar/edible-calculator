@@ -1,0 +1,12 @@
+{
+  "short_name": "Decarb calculator",
+  "name": "Cannabis decarb time calculator",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

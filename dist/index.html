@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cannabis decarb time calculator</title>
+  <meta name="description"
+    content="Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="canonical" href="http://www.ediblecalc.net/" />
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="js/DataFunctions.js"></script>
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div id="vue-root" class="container">
+    <header style="margin-bottom: 1em;" class="flow-text">
+      <h1 class="green-text text-darken-3">Decarb time calculator</h1>
+      <i>Decarboxylate your cannabis properly</i>
+    </header>
+    <section class="flow-text">
+      <div class="row">
+        <form action="#!" class="col s12 m6">
+          <div class="card-panel">
+
+            Processing temperature:
+            <div class="range-field">
+              <input type="range" min="98" max="150" name="temp" id="temp" v-model="userInput.temperature_degC"
+                v-on:change="handleChange" v-on:input="handleChange" />
+              <div style="display: flex; justify-content:space-around;">
+                <span>{{userInput.temperature_degC}}
+                  °C</span>
+                <em>or</em>
+                <span>{{computed.temperature_degF}}
+                  °F</span>
+              </div>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+      <div class="row">
+        <div>Full decarb time:
+          <h2 class="orange-text text-darken-4">{{Math.round(computed.ideal_time)}} min</h2>
+        </div>
+      </div>
+    </section>
+
+    <footer class="green-text text-darken-3">
+      <p>More features coming soon</p>
+      <p><a href="http://eiha.org/media/2014/08/16-10-25-Decarboxylation-of-THCA-to-active-THC.pdf">Data source</a>
+      </p>
+      <p>(C) ediblecalc.net, 2019</p>
+      <div v-html="errors+''"></div>
+
+    </footer>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="js/App.js"></script>
+
+</body>
+
+</html>
