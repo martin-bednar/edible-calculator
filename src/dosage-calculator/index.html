@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cannabis decarb time calculator</title>
+  <meta name="description"
+    content="Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="canonical" href="http://www.ediblecalc.net/" />
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="js/DataFunctions.js"></script>
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div id="vue-root" class="container">
+    <header style="margin-bottom: 1em;" class="flow-text">
+      <h1 class="green-text text-darken-3">Edible potency calculator</h1>
+    </header>
+    <section class="flow-text">
+        <p>What is the <b>weight of the cannabis</b> used?</p>
+      <input type="number" v-model="interaction.values[0]" v-on:input="handleChange(0)" step="0.1" v-on:blur="handleChange(1)" />
+        <p>What is the <b>percentage of THC</b> in the cannabis?</p>
+        {{interaction.values[1]}}
+      <input type="range" v-model="interaction.values[1]" v-on:input="handleChange(1)" v-on:blur="handleChange(0)" min="0.1" max="40" step="0.1" />
+      <p><b>Total amount of THC extracted:</b></p>
+      <input type="number" v-model="interaction.values[2]" v-on:input="handleChange(2)" v-on:blur="handleChange(1)" />
+      Number of portions:
+      <input type="number" v-model="interaction.values[3]" v-on:input="handleChange(3)" v-on:blur="handleChange(1)" />
+      THC per portion:
+      <input type="number" v-model="interaction.values[4]" v-on:input="handleChange(4)" v-on:blur="handleChange(1)" />
+    </section>
+    <div>
+      {{errors}}
+    </div>
+    <footer class="green-text text-darken-3">
+      <p>More features coming soon</p>
+      <p>(C) ediblecalc.net, 2019</p>
+      <div v-html="errors+''"></div>
+
+    </footer>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="js/App.js"></script>
+
+</body>
+
+</html>
