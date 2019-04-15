@@ -9,9 +9,9 @@
                     mWeed_grams: 1,
                     potency_percent: 10,
                     mTHC_miligrams: 60,
-                    nPortions : 1,
-                    mTHCPerPortion_miligrams : 60,
-                    values: [1,10,60,1,60]
+                    nPortions : 2,
+                    mTHCPerPortion_miligrams : 30,
+                    values: [1,10,60,2,30]
                 },
                 errors: []
             },
