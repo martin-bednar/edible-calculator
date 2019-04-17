@@ -26,8 +26,8 @@ export default new Router({
       name: 'testink',
       component: () => import('./views/Testink.vue')
     },
-    { path: "*", 
-    component: () => import('./views/404.vue')
-  }
+    { path: '*',
+      component: () => import('./views/404.vue')
+    }
   ]
 })

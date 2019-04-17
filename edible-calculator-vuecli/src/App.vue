@@ -4,17 +4,21 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/testink">Testink</router-link>
     </div>
+
     <router-view/>
+
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Inconsolata', monospace;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-color: $color-secondary;
+  color: $color-primary;
 }
 #nav {
   padding: 30px;
