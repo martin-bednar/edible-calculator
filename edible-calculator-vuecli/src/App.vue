@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/testink">Testink</router-link>
-    </div>
+    <ul>
+      <li> 
+          <router-link to="/decarb-time-calculator">Decarb time calculator</router-link> 
+      </li>
+      <li>
+                    <router-link to="/dosage-calculator">Edible dosage calculator</router-link> 
+
+      </li>
+    </ul></div>
 
     <router-view/>
 
@@ -16,9 +22,6 @@
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: $color-secondary;
-  color: $color-primary;
 }
 #nav {
   padding: 30px;

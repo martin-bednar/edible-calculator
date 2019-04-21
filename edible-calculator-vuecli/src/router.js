@@ -14,6 +14,16 @@ export default new Router({
       component: Home
     },
     {
+      path: '/decarb-time-calculator',
+      name: 'decarb time calculator',
+      component: () => import('./views/DecarbTimeCalculator.vue')
+    },
+    {
+      path: '/dosage-calculator',
+      name: 'edible dosage calculator',
+      component: () => import('./views/DosageCalculator.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
