@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss">
 #main-content{
-  
+
   padding: 0 1em;
 }
 #app {

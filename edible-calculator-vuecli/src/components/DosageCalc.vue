@@ -69,9 +69,9 @@
 
               </div>
               <div class="row">
-                
+
                 <div class="col s12 m7 push-m5">
-                  
+
                 <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
                 <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
                 <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
@@ -168,7 +168,7 @@ export default {
       } else {
         //
       }
-    },
+    }
 
   }
 }
