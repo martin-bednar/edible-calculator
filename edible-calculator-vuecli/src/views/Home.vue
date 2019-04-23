@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    Hi
+    <p class="flow-text">
+    If you can see this then you are awesome 🐱‍🚀🐱‍🐉
+    </p>
   </div>
 </template>
 

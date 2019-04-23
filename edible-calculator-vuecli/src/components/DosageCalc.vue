@@ -21,7 +21,7 @@
               What is the <b>percentage of THC</b> in the cannabis?
           </div>
 
-          <div class="col s2 m2 l1">
+          <div class="col s3 m2 l1">
 
               <span style="font-size: 0.9em;">
                   {{interaction.values[1]}} %</span>
@@ -67,6 +67,16 @@
                   mg per portion
                 </div>
 
+              </div>
+              <div class="row">
+                
+                <div class="col s12 m7 push-m5">
+                  
+                <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
+                <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
+                <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
+                <div v-else>High dose</div>
+                </div>
               </div>
    </section>
    <p class="flow-text">
@@ -134,11 +144,17 @@ export default {
         mWeed_grams: 1,
         potency_percent: 10,
         mTHC_miligrams: 60,
-        nPortions: 2,
-        mTHCPerPortion_miligrams: 30,
-        values: [1, 10, 60, 2, 30]
+        nPortions: 3,
+        mTHCPerPortion_miligrams: 20,
+        values: [1, 10, 60, 3, 20]
       },
-      errors: []
+      errors: [],
+      dosage: {
+        /* Defaults to high */
+        tiny: 3,
+        low: 10,
+        medium: 30
+      }
     }
   },
   methods: {
@@ -152,7 +168,8 @@ export default {
       } else {
         //
       }
-    }
+    },
+
   }
 }
 </script>

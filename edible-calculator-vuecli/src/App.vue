@@ -12,7 +12,7 @@
       </li>
     </ul></div>
 
-    <router-view/>
+    <router-view id="main-content"/>
 
   </div>
 </template>
@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style lang="scss">
+#main-content{
+  
+  padding: 0 1em;
+}
 #app {
   font-family: 'Inconsolata', monospace;
 
@@ -34,14 +38,16 @@ export default {
   padding: 30px;
   font-size: 1.7rem;
   a {
-    color: white;
-    &.router-link-exact-active {
-      text-decoration-line: underline;
-      color: antiquewhite;
+      color: rgb(46, 43, 46);
+    &:hover{
+      color: white;
     }
-  }
-  a::before{
-    content: '> ';
+    &::before{
+      content: '\a0\a0\a0'; //Double blank space
+    }
+    &.router-link-exact-active::before,{
+    content: '>> ';
+    }
   }
   background-color: #0caa63;
     position: relative;
