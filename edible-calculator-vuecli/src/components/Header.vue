@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: 'site-header'
+  name: 'site-header'
 }
 </script>
 

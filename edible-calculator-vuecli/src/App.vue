@@ -3,11 +3,11 @@
     <site-header />
     <div id="nav">
     <ul>
-      <li> 
-          <router-link to="/decarb-time-calculator">Decarb time calculator</router-link> 
+      <li>
+          <router-link to="/decarb-time-calculator">Decarb time calculator</router-link>
       </li>
       <li>
-                    <router-link to="/dosage-calculator">Edible dosage calculator</router-link> 
+                    <router-link to="/dosage-calculator">Edible dosage calculator</router-link>
 
       </li>
     </ul></div>
@@ -17,9 +17,9 @@
   </div>
 </template>
 <script>
-import SiteHeader from '@/components/Header.vue';
+import SiteHeader from '@/components/Header.vue'
 export default {
-  components: {SiteHeader}
+  components: { SiteHeader }
 }
 </script>
 
