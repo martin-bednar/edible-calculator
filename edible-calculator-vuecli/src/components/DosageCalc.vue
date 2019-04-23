@@ -71,7 +71,7 @@
    </section>
    <p class="flow-text">
      Have you already tested out the
-   <a href="../">Decarb time calculator</a>?
+   <router-link to="decarb-time-calculator">Decarb time calculator</router-link>?
   </p>
     <div class="row">
         <article class="col s12 m8 flow-text">

@@ -1,6 +1,8 @@
 <template>
     <header class="site-header">
+      <router-link to="/">
        <h2> edible calculator</h2>
+       </router-link>
     </header>
 </template>
 

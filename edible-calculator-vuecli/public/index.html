@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <script src="DataFunctions.js"></script>
+<head>
 
-    <title>edible-calculator-vuecli</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but edible-calculator-vuecli doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Basic meta tags-->
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
 
-  </body>
+  <!--Description-->
+  <title>Cannabis decarb time calculator | Edible Calculator</title>
+  <meta name="description"
+    content="Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator">
+  
+
+  <!--For robots-->
+  <link rel="canonical" href="http://www.ediblecalc.net/" />
+  <link rel="manifest" href="site.webmanifest">
+
+  <!--Icons-->
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+  <!--Fonts and colors-->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!--Scripts-->
+  <script src="js/DataFunctions.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138222512-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138222512-1');
+  </script>
+
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <noscript>
+    <strong>We're sorry but Edible Calculator doesn't work properly without JavaScript enabled. Please enable it
+      to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
 </html>

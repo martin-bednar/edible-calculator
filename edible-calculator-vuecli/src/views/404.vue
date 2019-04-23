@@ -1,18 +1,13 @@
 <template>
     <div>
        <h1>
-           <span>
-           Soory
-           </span>
+           Error 404 - Page not found
            </h1>
+        <p>Sorry, but the page you were trying to view does not exist.</p>
     </div>
 </template>
 <script>
 </script>
 <style scoped>
-
-    h1 {
-        transform: skew(0, 7deg);
-    }
 
 </style>
