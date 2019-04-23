@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <site-header />
     <div id="nav">
     <ul>
       <li> 
@@ -15,6 +16,12 @@
 
   </div>
 </template>
+<script>
+import SiteHeader from '@/components/Header.vue';
+export default {
+  components: {SiteHeader}
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -25,12 +32,25 @@
 }
 #nav {
   padding: 30px;
+  font-size: 1.7rem;
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    color: white;
     &.router-link-exact-active {
-      color: #42b983;
+      text-decoration-line: underline;
+      color: antiquewhite;
     }
   }
+  a::before{
+    content: '> ';
+  }
+  background-color: #0caa63;
+    position: relative;
+    top: -2vw;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
 }
 </style>
