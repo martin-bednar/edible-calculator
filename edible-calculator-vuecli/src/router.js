@@ -4,7 +4,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+var router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -16,28 +16,30 @@ export default new Router({
     {
       path: '/decarb-time-calculator',
       name: 'decarb time calculator',
-      component: () => import('./views/DecarbTimeCalculator.vue')
+      component: () => import('./views/DecarbTimeCalculator.vue'),
+      meta: {
+        title: 'Cannabis decarb time calculator',
+        description: 'Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator'
+      }
     },
     {
       path: '/dosage-calculator',
       name: 'edible dosage calculator',
       component: () => import('./views/DosageCalculator.vue')
     },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    },
-    {
-      path: '/testink',
-      name: 'testink',
-      component: () => import('./views/Testink.vue')
-    },
     { path: '*',
-      component: () => import('./views/404.vue')
+      component: () => import('./views/404.vue'),
+      meta: {
+        title: 'Oops 🤢'
+      }
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title ? (to.meta.title + ' | Edible calculator') : 'Edible Calculator - The cannabis decarboxylation calculator'
+
+  next()
+})
+
+export default router

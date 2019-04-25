@@ -83,45 +83,9 @@
      Have you already tested out the
    <router-link to="decarb-time-calculator">Decarb time calculator</router-link>?
   </p>
-    <div class="row">
-        <article class="col s12 m8 flow-text">
-            <h2>About the edible dosage calculator</h2>
+    <!--Dosage calc guide  / documentation-->
+    <edible-article id="edible-dosage-calculator"></edible-article>
 
-            <p>Here you can calculate the amount of THC (potency) of your cannabis edibles or <a href="https://www.leafly.com/news/lifestyle/recipe-how-to-make-basic-cannabutter">cannabutter</a>.</p>
-
-            <p>Alternatively, you can use this calculator to figure out the weight of your cannabis needed to produce certain amount of THC in the finished product.</p>
-
-            <h2>Usage guide</h2>
-
-            <p>You are free to edit any of the variables of the THC extraction, so that you can either calculate the amount of cannabis needed to produce the desired potency of your edibles, or you can calculate the total amount of THC in your edibles by entering the amount of cannabis you started with.</p>
-
-            <p>This calculator works most precisely for decarboxyled cannabis, so don't forget to <a href="https://www.leafly.com/news/cannabis-101/what-is-decarboxylation">decarboxylate</a> it first!</p>
-
-            <h3>1. Weight of the cannabis used</h3>
-
-            <p>Is the total dry weight of your starting product (cannabis) before the extraction.</p>
-
-            <h3>2. Percentage of THC</h3>
-
-            <p>The typical percentage of THC in your starting product goes usually like this:
-                </p>
-                <ul>
-                <li> approx. 5% for <strong>uncut</strong> dried plant material. </li>
-                <li> 7-14% for <strong>lower quality</strong> dried cannabis buds. </li>
-                <li> 15-25% for <strong>higher quality</strong> dried cannabis buds. High quality cannabis usually doesn't contain any seeds or leaves and has been properly dried and cured. </li>
-                </ul>
-            <h3>3. Total amount of THC extracted</h3>
-
-            <p>Is the total amount of psychoactive THC <em>(Δ-9-THC)</em> dissolved in your final extraction product.</p>
-
-            <h2>How does it work? Calculations explained</h2>
-
-            <p>This calculator assumes the conversion rate of <strong>60%</strong> (1 gram of 10% THC product transforms into 60 mg Δ-9-THC dissolved in oil).</p>
-
-            <p>Several online tools assume a 100% conversion rate, which is not even theoretically possible! The highest rate possible in laboratory environment is around 87%, but in case of homemade edibles, it's typically even lower because of the limitations of equipment.</p>
-
-        </article>
-        </div>
     <footer class="green-text text-darken-3">
       <p>More features coming soon</p>
       <p>(C) ediblecalc.net, 2019</p>
@@ -133,6 +97,7 @@
 
 </template>
 <script>
+import Article from '@/components/Article.vue'
 export default {
   name: 'calculatorDosage',
   mounted: function () {
@@ -170,6 +135,9 @@ export default {
       }
     }
 
+  },
+  components: {
+    'edible-article': Article
   }
 }
 </script>
