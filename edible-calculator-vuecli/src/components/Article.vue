@@ -1,3 +1,6 @@
+<!--
+    This component provides the Edible Dosage Calculator with a documentation that is stored as a Markdown file.
+-->
 <template>
     <div>
     <vue-markdown>{{loadArticle(id)}}</vue-markdown>
