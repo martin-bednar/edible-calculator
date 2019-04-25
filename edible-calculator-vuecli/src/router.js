@@ -37,7 +37,7 @@ var router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title ? (to.meta.title + ' | Edible calculator') : 'Edible Calculator - The cannabis decarboxylation calculator'
+  document.title = to.meta.title ? (to.meta.title + ' 🍍 Edible calculator') : '🍍 Edible Calculator - The cannabis decarboxylation calculator'
 
   next()
 })
