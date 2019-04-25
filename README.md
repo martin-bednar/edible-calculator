@@ -1,5 +1,6 @@
 # Edible Calculator
-Easy-to-use tool for creating potent THC-infused edibles. Live on [ediblecalc.net](http://www.ediblecalc.net).
+Easy-to-use tool for creating potent THC-infused edibles. Live on [ediblecalc.net](https://www.ediblecalc.net) and [netlify](https://ediblecalc.netlify.com)
+
 [Trello](https://trello.com/b/7TbHpi4e/edible-calculator-quests)
 
 ## Folder structure
