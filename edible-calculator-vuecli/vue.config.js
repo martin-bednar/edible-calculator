@@ -16,14 +16,6 @@ module.exports = {
     }
   },
   configureWebpack: {
-    module: {
-      rules: [
-        {
-          test: /\.md$/i,
-          use: 'raw-loader'
-        }
-      ]
-    },
     plugins: [
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'), // The path to the folder where index.html is.

@@ -22,7 +22,7 @@ export default {
     loadArticle: function (id) {
       switch (id) {
         case 'edible-dosage-calculator':
-          return file_EdibleDosageCalculator
+          return file_EdibleDosageCalculator;
           break
 
         default:
