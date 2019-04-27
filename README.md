@@ -10,7 +10,7 @@ Easy-to-use application toolkit for creating potent THC-infused edibles. Live on
    - ```public```: Static files
    - ```src```: Source code
 
-## Technical overview
+## Technologies used
 ### Back-end:
  - **Vue-cli** as an environment.
  - **Webpack** for bundling.
