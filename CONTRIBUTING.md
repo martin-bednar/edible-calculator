@@ -5,6 +5,15 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
+## Branch structure
+
+Pull requests should follow one of these paths: 
+`feat-* -> dev -> master` or `fix-* -> dev -> master` or `hotfix-* -> master`
+
+ - `feat-*` - new feature or improvement in developement. Please name the branch accordingly (example: A branch adding Open Graph tags support should be named `feat-open_graph` or `feat-open_graph_tags`)
+ - `dev` - general development branch 
+ - `fix-*` and `hotfix-*` - the branch introduces a fix, rather than a completely new feature. Use `hotfix-*` for branches that fix bugs in `master` and `fix-*` for bugs in `dev`
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
