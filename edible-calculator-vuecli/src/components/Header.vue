@@ -11,10 +11,10 @@
     
       <nav class="site-header__nav">
     <ul>
-      <li>
+      <li class="site-header__nav-item">
           <router-link to="/decarb-time-calculator">Decarb time calculator</router-link>
       </li>
-      <li>
+      <li class="site-header__nav-item">
                     <router-link to="/dosage-calculator">Edible dosage calculator</router-link>
       </li>
     </ul>
@@ -41,10 +41,23 @@ h2{
     color:#0caa63;
     text-align: center;
 }
+.site-header__nav-item{
+  float: none;
+  display: block;
+  text-align: center;
+}
+@media only screen and (min-width:600px) {
+  
+.site-header__nav-item{
+  display: inline-block;
+}
+  
+}
 .site-header__nav {
   
   box-sizing: border-box;
   background-color: #0caa63;
+  height: unset;
   
   a {
       font-size: 1.6em;
