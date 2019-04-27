@@ -11,7 +11,7 @@ The project is powered by vue-cli. The base development directory (for running s
 
 *You need [node.js](https://nodejs.org/en/) installed on your machine.*
 
- 1. Navigate to the base directory?
+ 1. Navigate to the base directory:
 
  ```
   cd edible-calculator-vuecli
