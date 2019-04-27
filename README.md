@@ -1,6 +1,35 @@
 # Edible Calculator
-Easy-to-use application toolkit for creating potent THC-infused edibles. Live on [ediblecalc.net](https://www.ediblecalc.net) and [netlify](https://ediblecalc.netlify.com)
+Easy-to-use PWA toolkit and guide for creating potent THC-infused edibles. Live on [ediblecalc.net](https://www.ediblecalc.net) and [netlify](https://ediblecalc.netlify.com).
 
+## Why is it cool 💃
+ - The computations are very precise and provide correct, science-based results.
+ - Edible calculator meets PWA standards.
+ - The project is logically structured and runs on modern technologies to provide the best user experience and support wide amount of devices and browsers.
+
+## Basic development info
+The project is powered by vue-cli. The base development directory (for running scripts etc.) is `edible-calculator/edible-calculator-vuecli`.
+
+**How to build:**
+
+*You need [node.js](https://nodejs.org/en/) installed on your machine.*
+
+ 1. Navigate to the base directory:
+
+ ```
+  cd edible-calculator-vuecli
+ ```
+
+ 2. Install `node-modules` for the project (they are disabled by `.gitignore`):
+ ```
+  npm install
+ ```
+
+ 3. Now you can use the following scripts:
+  - `npm run build` to build into `dist` folder 
+  - `npm run serve` to serve on `localhost:8080`
+  - `npm run lint` to lint all source files using a linter specified in `package.json` (currently ESLint)
+
+ *Note: The `master` branch gets automatically built and deployed to the [netlify website](https://ediblecalc.netlify.com)*
 
 ## Folder structure
  - ```_old```: Old versions of the project
@@ -31,8 +60,9 @@ Easy-to-use application toolkit for creating potent THC-infused edibles. Live on
  - **Trello** for task management *(New features and plans should be on Trello, bugs and issues on Github)*
 
 ## Routing path structure
+This is a list of accessible routing paths with the `views` and `components` linked to them.
  ```
- Globals: App.vue, components/Header.vue
+ '*' (everything) - App.vue, components/Header.vue
  '/' - Home page (views/Home.vue)
  '/dosage-calculator' - Edible dosage calculator app (views/DosageCalculator.vue, components/DosageCalc.vue, assets/articles/EdibleDosageCalculator.md)
  '/decarb-time-calculator' - Decarb time calculator app (views/DecarbTimeCalculator.vue, components/DecarbCalc.vue)
