@@ -1,2 +1,2 @@
 ## April 27, 2019
- - Added site footer and other changes (#15)
+ - Added site footer and changed the site header to look and feel better (#15)
