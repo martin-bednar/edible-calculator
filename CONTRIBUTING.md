@@ -8,7 +8,15 @@ Please note we have a code of conduct, please follow it in all your interactions
 ## Branch structure
 
 Pull requests should follow one of these paths: 
-`feat-* -> dev -> master` or `fix-* -> dev -> master` or `hotfix-* -> master`
+`feat-* -> dev -> master` 
+
+*or*
+
+`fix-* -> dev -> master`
+
+*or* 
+
+`hotfix-* -> master`
 
  - `feat-*` - new feature or improvement in developement. Please name the branch accordingly (example: A branch adding Open Graph tags support should be named `feat-open_graph` or `feat-open_graph_tags`)
  - `dev` - general development branch 
