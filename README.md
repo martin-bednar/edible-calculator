@@ -1,11 +1,13 @@
 # Edible Calculator
 Easy-to-use PWA toolkit and guide for creating potent THC-infused edibles. Live on [ediblecalc.net](https://www.ediblecalc.net) and [netlify](https://ediblecalc.netlify.com).
 
+## Why is it cool 💃
+ - The computations are very precise and provide correct, science-based results.
+ - Edible calculator meets PWA standards.
+ - The project is logically structured and runs on modern technologies to provide the best user experience and support wide amount of devices and browsers.
+
 ## Basic development info
 The project is powered by vue-cli. The base development directory (for running scripts etc.) is `edible-calculator/edible-calculator-vuecli`.
-
-
-
 
 **How to build:**
 
@@ -58,8 +60,9 @@ The project is powered by vue-cli. The base development directory (for running s
  - **Trello** for task management *(New features and plans should be on Trello, bugs and issues on Github)*
 
 ## Routing path structure
+This is a list of accessible routing paths with the `views` and `components` linked to them.
  ```
- Globals: App.vue, components/Header.vue
+ '*' (everything) - App.vue, components/Header.vue
  '/' - Home page (views/Home.vue)
  '/dosage-calculator' - Edible dosage calculator app (views/DosageCalculator.vue, components/DosageCalc.vue, assets/articles/EdibleDosageCalculator.md)
  '/decarb-time-calculator' - Decarb time calculator app (views/DecarbTimeCalculator.vue, components/DecarbCalc.vue)
