@@ -1,9 +1,25 @@
 <template>
+    <div class="site-header__wrapper">
     <header class="site-header">
       <router-link to="/">
        <h2> edible calculator <span class="blink"> _</span></h2>
        </router-link>
+
+
     </header>
+        
+    
+      <nav class="site-header__nav">
+    <ul>
+      <li class="site-header__nav-item">
+          <router-link to="/decarb-time-calculator">Decarb time calculator</router-link>
+      </li>
+      <li class="site-header__nav-item">
+                    <router-link to="/dosage-calculator">Edible dosage calculator</router-link>
+      </li>
+    </ul>
+    </nav>
+    </div>
 </template>
 
 <script>
@@ -17,19 +33,40 @@ export default {
   padding: 2em 1em;
     background-color: black;
     color:white;
-  position: relative;
   z-index: 99;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 1vw),
-    0 100%
-  );
 }
 h2{
     padding: 0 .5em;
     margin: 0;
     color:#0caa63;
+    text-align: center;
+}
+.site-header__nav-item{
+  float: none;
+  display: block;
+  text-align: center;
+}
+@media only screen and (min-width:600px) {
+  
+.site-header__nav-item{
+  display: inline-block;
+}
+  
+}
+.site-header__nav {
+  
+  box-sizing: border-box;
+  background-color: #0caa63;
+  height: unset;
+  
+  a {
+      font-size: 1.6em;
+      color: rgb(46, 43, 46);
+    &:hover,
+    &.router-link-exact-active{
+      color: white;
+    }
+  }
 }
 @keyframes blink-anim {
   0%{

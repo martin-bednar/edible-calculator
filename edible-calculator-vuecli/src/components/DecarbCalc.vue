@@ -35,10 +35,8 @@
     </section>
 
     <footer class="green-text text-darken-3">
-      <p>More features coming soon</p>
       <p><a href="http://eiha.org/media/2014/08/16-10-25-Decarboxylation-of-THCA-to-active-THC.pdf">Data source</a>
       </p>
-      <p>(C) ediblecalc.net, 2019</p>
       <div v-html="errors+''"></div>
 
     </footer>
