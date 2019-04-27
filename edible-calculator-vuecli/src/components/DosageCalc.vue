@@ -89,8 +89,6 @@
     <edible-article id="edible-dosage-calculator"></edible-article>
 
     <footer class="green-text text-darken-3">
-      <p>More features coming soon</p>
-      <p>(C) ediblecalc.net, 2019</p>
       <div v-html="errors+''"></div>
 
     </footer>
