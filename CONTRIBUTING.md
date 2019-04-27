@@ -8,6 +8,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 ## Branch structure
 
 Pull requests should follow one of these paths: 
+
 `feat-* -> dev -> master` 
 
 *or*
