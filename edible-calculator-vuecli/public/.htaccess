@@ -6,3 +6,5 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
+
+ErrorDocument 404 /error-404
