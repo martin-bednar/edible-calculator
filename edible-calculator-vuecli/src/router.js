@@ -11,7 +11,8 @@ var router = new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      alias: '/index.html'
     },
     {
       path: '/decarb-time-calculator',
