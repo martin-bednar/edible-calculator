@@ -2,10 +2,9 @@
     This component provides the Edible Dosage Calculator with a documentation that is stored as a Markdown file.
 -->
 <template>
-    <div>
+    <article class="article">
     <vue-markdown>{{loadArticle(id)}}</vue-markdown>
-
-    </div>
+    </article>
 </template>
 
 <script>
@@ -26,7 +25,8 @@ export default {
           return file_EdibleDosageCalculator
           break
         case 'decarb-time-calculator':
-          return file_EdibleDosageCalculator
+          return file_DecarbTimeCalculator
+          break
         
         default:
           return 'Markdown file load error'
@@ -38,5 +38,19 @@ export default {
 </script>
 
 <style>
-
+.article{
+  display: flex;
+  justify-content: center;
+}
+  .article h2, .article h3{
+    font-size: 2.2em;
+  }
+  .article p{
+    max-width: 30em;
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: rgba(0,0,0,0.86);
+  }
 </style>

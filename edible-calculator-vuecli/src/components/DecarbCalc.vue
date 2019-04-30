@@ -44,6 +44,8 @@
   </div>
 </template>
 <script>
+
+import Article from '@/components/Article.vue'
 export default {
   name: 'calculatorDecarb',
   mounted: function () {
@@ -90,6 +92,9 @@ export default {
       this.computed.ideal_time = computed.ideal_time
       this.computed.temperature_degF = computed.tempF
     }
+  },
+  components: {
+    'edible-article': Article
   }
 }
 </script>
