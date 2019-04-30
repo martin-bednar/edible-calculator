@@ -33,10 +33,10 @@
         </div>
       </div>
     </section>
+    <!--Dosage calc guide  / documentation-->
+    <edible-article id="decarb-time-calculator"></edible-article>
 
     <footer class="green-text text-darken-3">
-      <p><a href="http://eiha.org/media/2014/08/16-10-25-Decarboxylation-of-THCA-to-active-THC.pdf">Data source</a>
-      </p>
       <div v-html="errors+''"></div>
 
     </footer>

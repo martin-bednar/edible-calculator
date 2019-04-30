@@ -11,6 +11,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import file_EdibleDosageCalculator from 'raw-loader!@/assets/articles/EdibleDosageCalculator.md'
+import file_DecarbTimeCalculator from 'raw-loader!@/assets/articles/DecarbTimeCalculator.md'
 export default {
   components: {
     'vue-markdown': VueMarkdown
@@ -24,7 +25,9 @@ export default {
         case 'edible-dosage-calculator':
           return file_EdibleDosageCalculator
           break
-
+        case 'decarb-time-calculator':
+          return file_EdibleDosageCalculator
+        
         default:
           return 'Markdown file load error'
           break
