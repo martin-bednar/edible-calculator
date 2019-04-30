@@ -5,10 +5,8 @@
        <h2> edible calculator <span class="blink"> _</span></h2>
        </router-link>
 
-
     </header>
-        
-    
+
       <nav class="site-header__nav">
     <ul>
       <li class="site-header__nav-item">
@@ -47,18 +45,18 @@ h2{
   text-align: center;
 }
 @media only screen and (min-width:600px) {
-  
+
 .site-header__nav-item{
   display: inline-block;
 }
-  
+
 }
 .site-header__nav {
-  
+
   box-sizing: border-box;
   background-color: #0caa63;
   height: unset;
-  
+
   a {
       font-size: 1.6em;
       color: rgb(46, 43, 46);

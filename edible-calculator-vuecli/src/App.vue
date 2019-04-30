@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <site-header />
-    
 
     <router-view id="main-content"/>
 

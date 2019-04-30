@@ -1,9 +1,9 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
 // Renders headlessly in a downloaded version of Chromium through puppeteer
-const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer;
+const PuppeteerRenderer = PrerenderSPAPlugin.PuppeteerRenderer
 
 module.exports = {
   css: {
@@ -19,7 +19,7 @@ module.exports = {
     plugins: [
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'dist'), // The path to the folder where index.html is.
-        routes: ['/','/decarb-time-calculator','/dosage-calculator'], // List of routes to prerender.
+        routes: ['/', '/decarb-time-calculator', '/dosage-calculator'], // List of routes to prerender.
         renderer: new PuppeteerRenderer()
       })
     ]

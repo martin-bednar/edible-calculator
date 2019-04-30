@@ -9,7 +9,7 @@
       <a href="/sitemap.xml" class="site-footer__link">
         Sitemap
        </a>
-    
+
       <a href="https://github.com/martin-bednar/edible-calculator" class="site-footer__link">
         View on github
        </a>
