@@ -18,7 +18,7 @@ export default {
 <style lang="scss">
 #main-content{
 
-  padding: 0 1em;
+  padding: 4em 1em;
 }
 #app {
   font-family: 'Inconsolata', monospace;
@@ -30,5 +30,7 @@ export default {
   min-height: 100vh;
   grid-template: auto 1fr auto / 100%;
 }
-
+a{
+  color: #0c9751;
+}
 </style>
