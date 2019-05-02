@@ -9,7 +9,7 @@
       <a href="/sitemap.xml" class="site-footer__link">
         Sitemap
        </a>
-    
+
       <a href="https://github.com/martin-bednar/edible-calculator" class="site-footer__link">
         View on github
        </a>
@@ -27,8 +27,8 @@ export default {
 
 <style lang="scss" scoped>
 .site-footer{
-    background-color: #0caa63;
-    color: white;
+    background-color: #8bcaae;
+    color: black;
     padding: 1em;
 }
 .site-footer__wrapper{
@@ -38,6 +38,6 @@ export default {
     &::after{
         content: '|';
     }
-    color: white;
+    color: rgb(0, 32, 3);
 }
 </style>

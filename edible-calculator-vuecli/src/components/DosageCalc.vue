@@ -27,7 +27,7 @@
                   {{interaction.values[1]}} %</span>
           </div>
           <div class="col s9 m4">
-            
+
             <div class="range-field">
             <input type="range" v-model="interaction.values[1]" v-on:input="handleChange(1)" v-on:blur="handleChange(0)" min="0.1" max="40" step="0.1" />
             </div>
