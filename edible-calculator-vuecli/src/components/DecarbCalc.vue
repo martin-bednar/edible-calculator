@@ -46,6 +46,9 @@
 <script>
 
 import Article from '@/components/Article.vue'
+import Interpolator from '@/js/Interpolator.js'
+import ValueCoordinates from "@/js/ValueCoordinates.js"
+
 export default {
   name: 'calculatorDecarb',
   mounted: function () {
@@ -81,7 +84,7 @@ export default {
       input.temp = this.userInput.temperature_degC
       // 3. set Ideal Time
       try {
-        computed.ideal_time = InterpolateSmart(input.temp, data)
+        computed.ideal_time = Interpolator.InterpolateSmart(input.temp, data)
       } catch (error) {
         this.errors.push(error + '<br />')
       }
