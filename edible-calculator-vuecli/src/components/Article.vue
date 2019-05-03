@@ -45,6 +45,11 @@ export default {
 .article{
   display: flex;
   justify-content: center;
+  font-weight: 300;
+}
+.article strong{
+    font-weight: 400;
+    color: #032212;
 }
   .article h2, .article h3{
     font-size: 2.2em;
@@ -52,11 +57,10 @@ export default {
   .article ul,.article p{
     max-width: 30em;
     text-align: justify;
-    font-size: 1.5em;
-    line-height: 1.7;
+    font-size: calc(1.3em + 0.5vw);
+    line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
-    color: rgba(0,0,0,0.86);
+    color:black;
   }
   .article ul li{
     list-style-type: circle;
