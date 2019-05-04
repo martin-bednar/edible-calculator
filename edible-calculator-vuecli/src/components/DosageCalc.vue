@@ -83,10 +83,18 @@
       </div>
       <div class="row">
         <div class="col s12 m7 push-m5">
+          <div v-if="interaction.values[4]<dosage.high" class="message message--neutral">
           <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
           <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
           <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
           <div v-else>High dose</div>
+          </div>
+          
+          <div v-else class="message message--important">
+            <div>
+              Warning: <span>Very high dose! Dosage over {{dosage.high}} mg is not recommended.</span>
+              </div>  
+             </div>
         </div>
       </div>
     </section>
@@ -126,10 +134,11 @@ export default {
       },
       errors: [],
       dosage: {
-        /* Defaults to high */
+        /* Defaults to very high */
         tiny: 3,
         low: 10,
-        medium: 30
+        medium: 30,
+        high: 60
       }
     };
   },
@@ -159,3 +168,6 @@ export default {
   }
 };
 </script>
+
+<style>
+</style>
