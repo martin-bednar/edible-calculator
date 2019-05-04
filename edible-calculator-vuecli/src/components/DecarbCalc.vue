@@ -34,7 +34,7 @@
       </div>
       <p>
         
-              <em class="--small-text --message-neutral">Don't forget to <strong>preheat</strong> the oven to {{userInput.temperature_degC}} °C ({{computed.temperature_degF}} °F) before you put the cannabis inside.</em>
+              <em class="--small-text message message--neutral">Don't forget to <strong>preheat</strong> the oven to {{userInput.temperature_degC}} °C ({{computed.temperature_degF}} °F) before you put the cannabis inside.</em>
       </p>
     </section>
     <!--Dosage calc guide  / documentation-->
