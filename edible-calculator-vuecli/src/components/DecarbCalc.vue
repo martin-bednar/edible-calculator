@@ -29,9 +29,13 @@
       </div>
       <div class="row">
         <div>Full decarb time:
-          <h2 class="orange-text text-darken-4">{{Math.round(computed.ideal_time)}} min</h2>
+          <h2 class="orange-text text-darken-4"><span class="--result"> {{Math.round(computed.ideal_time)}}</span> min</h2>
         </div>
       </div>
+      <p>
+        
+              <em class="--small-text --message-neutral">Don't forget to <strong>preheat</strong> the oven to {{userInput.temperature_degC}} °C ({{computed.temperature_degF}} °F) before you put the cannabis inside.</em>
+      </p>
     </section>
     <!--Dosage calc guide  / documentation-->
     <edible-article id="decarb-time-calculator"></edible-article>
@@ -43,6 +47,15 @@
 
   </div>
 </template>
+<style scoped>
+.--small-text{
+  font-size: 0.8em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.--result{
+  border-bottom: .1em solid;
+}
+</style>
 <script>
 
 import Article from '@/components/Article.vue'

@@ -33,4 +33,11 @@ export default {
 a{
   color: #0c9751;
 }
+
+.--message-neutral{
+  border-radius: 3px;
+  padding: 3px .5em;
+  background-color: rgba(163, 206, 231,0.8);
+  display: inline-block;
+}
 </style>

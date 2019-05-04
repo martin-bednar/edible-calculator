@@ -83,7 +83,7 @@
       </div>
       <div class="row">
         <div class="col s12 m7 push-m5">
-          <div class="dose-indicator">
+          <div class="--message-neutral">
           <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
           <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
           <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
@@ -163,10 +163,4 @@ export default {
 </script>
 
 <style>
-.dose-indicator{
-  border-radius: 3px;
-  padding: 3px .5em;
-  background-color: rgb(163, 206, 231);
-  display: inline-block;
-}
 </style>
