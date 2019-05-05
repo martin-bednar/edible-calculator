@@ -84,17 +84,18 @@
       <div class="row">
         <div class="col s12 m7 push-m5">
           <div v-if="interaction.values[4]<dosage.high" class="message message--neutral">
-          <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
-          <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
-          <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
-          <div v-else>High dose</div>
+            <div v-if="interaction.values[4]<dosage.tiny">Tiny dose</div>
+            <div v-else-if="interaction.values[4]<dosage.low">Low dose</div>
+            <div v-else-if="interaction.values[4]<dosage.medium">Medium dose</div>
+            <div v-else>High dose</div>
           </div>
-          
+
           <div v-else class="message message--important">
             <div>
-              Warning: <span>Very high dose! Dosage over {{dosage.high}} mg is not recommended.</span>
-              </div>  
-             </div>
+              Warning:
+              <span>Very high dose! Dosage over {{dosage.high}} mg is not recommended.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -111,26 +112,32 @@
   </div>
 </template>
 <script>
-import Article from "@/components/Article.vue";
-import Nicer from '@/js/Nicer.js';
-import _DosageSolver from "@/js/DosageSolver.js";
-var DosageSolver;
+import Article from '@/components/Article.vue'
+import Nicer from '@/js/Nicer.js'
+import _DosageSolver from '@/js/DosageSolver.js'
+import _GAEventHandler from '@/js/GAEvents.js'
+
+var DosageSolver
+var GAEventHandler
+
 export default {
-  name: "calculatorDosage",
-  mounted: function() {
-    DosageSolver = new _DosageSolver();
-    this.handleChange(0);
+  name: 'calculatorDosage',
+  mounted: function () {
+    DosageSolver = new _DosageSolver()
+    this.GAEventHandler = new _GAEventHandler(this.$ga);
   },
-  data() {
+  data () {
     return {
-      DosageSolver,
       interaction: {
+        /*
         mWeed_grams: 1,
         potency_percent: 10,
         mTHC_miligrams: 60,
         nPortions: 3,
-        mTHCPerPortion_miligrams: 20,
-        values: [1, 10, 60, 3, 20]
+        mTHCPerPortion_miligrams: 20
+        */
+        values: [1, 10, 60, 3, 20],
+        userHasInteracted: false
       },
       errors: [],
       dosage: {
@@ -140,33 +147,41 @@ export default {
         medium: 30,
         high: 60
       }
-    };
+    }
   },
   methods: {
-    isValidNumber(value) {
-      if (value == "") return false;
-      if (value <= 0) return false;
-      return true;
+    isValidNumber (value) {
+      if (value == '') return false
+      if (value <= 0) return false
+      return true
     },
-    handleChange: function(_iDontChange) {
+    handleChange: function (_iDontChange) {
       if (this.interaction.values[_iDontChange] > 10000) {
-        this.interaction.values[_iDontChange] = 10000;
+        this.interaction.values[_iDontChange] = 10000
       } else if (this.isValidNumber(this.interaction.values[_iDontChange])) {
         this.interaction.values = DosageSolver.SolveAll(
           this.interaction.values,
           _iDontChange
-        );
+        )
 
-        this.interaction.values = Nicer.getNiceArray(this.interaction.values, 10);
+        this.interaction.values = Nicer.getNiceArray(
+          this.interaction.values,
+          10
+        )
       } else {
         //
+      }
+      
+      if(!this.interaction.userHasInteracted){
+      this.GAEventHandler.SendFirstInteraction({eventLabel: 'Dosage Calculator'});
+      this.interaction.userHasInteracted = true
       }
     }
   },
   components: {
-    "edible-article": Article
+    'edible-article': Article
   }
-};
+}
 </script>
 
 <style>

@@ -7,6 +7,6 @@ import Article from '@/components/Article.vue'
 
 export default {
   name: 'home',
-  components:{'edible-article': Article}
+  components: { 'edible-article': Article }
 }
 </script>

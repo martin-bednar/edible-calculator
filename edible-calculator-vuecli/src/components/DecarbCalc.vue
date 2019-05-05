@@ -33,7 +33,7 @@
         </div>
       </div>
       <p>
-        
+
               <em class="--small-text message message--neutral">Don't forget to <strong>preheat</strong> the oven to {{userInput.temperature_degC}} °C ({{computed.temperature_degF}} °F) before you put the cannabis inside.</em>
       </p>
     </section>
@@ -60,12 +60,17 @@
 
 import Article from '@/components/Article.vue'
 import Interpolator from '@/js/Interpolator.js'
-import ValueCoordinates from "@/js/ValueCoordinates.js"
+import ValueCoordinates from '@/js/ValueCoordinates.js'
+
+import _GAEventHandler from '@/js/GAEvents.js'
+
+
+var GAEventHandler
 
 export default {
   name: 'calculatorDecarb',
   mounted: function () {
-    this.handleChange()
+    this.GAEventHandler = new _GAEventHandler(this.$ga);
   },
   data () {
     return {
@@ -73,10 +78,13 @@ export default {
         temperature_degC: 120
       },
       computed: {
-        ideal_time: 0,
-        temperature_degF: 0
+        ideal_time: 75,
+        temperature_degF: 248
       },
-      errors: []
+      errors: [],
+      interaction: {
+        userHasInteracted: false
+      }
     }
   },
   methods: {
@@ -107,6 +115,12 @@ export default {
       this.computed.decarbPercentage = computed.percentage
       this.computed.ideal_time = computed.ideal_time
       this.computed.temperature_degF = computed.tempF
+
+      // 7. Send GA Event
+      if(!this.interaction.userHasInteracted){
+      this.GAEventHandler.SendFirstInteraction({eventLabel: 'Decarb Time Calculator'});
+      }
+      this.interaction.userHasInteracted = true
     }
   },
   components: {
