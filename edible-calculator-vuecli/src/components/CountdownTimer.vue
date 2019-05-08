@@ -51,6 +51,7 @@ export default {
   },
   methods: {
     Start: function() {
+      this.finished = false;
       var time_total_miliseconds = this.input_timespan * 60 * 1000;
       var now = Date.now();
       this.countdown.date_start = now;
