@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Meta from 'vue-meta'
 
 Vue.use(Router)
+Vue.use(Meta)
 
 var router = new Router({
   mode: 'history',
@@ -18,10 +20,6 @@ var router = new Router({
       path: '/decarb-time-calculator',
       name: 'decarb time calculator',
       component: () => import('./views/DecarbTimeCalculator.vue'),
-      meta: {
-        title: 'Cannabis decarb time calculator',
-        description: 'Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator'
-      }
     },
     {
       path: '/dosage-calculator',
@@ -29,18 +27,9 @@ var router = new Router({
       component: () => import('./views/DosageCalculator.vue')
     },
     { path: '*',
-      component: () => import('./views/404.vue'),
-      meta: {
-        title: 'Oops 🤢'
-      }
+      component: () => import('./views/404.vue')
     }
   ]
-})
-
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title ? (to.meta.title + ' 🍍 Edible calculator') : '🍍 Edible Calculator - The cannabis decarboxylation calculator'
-
-  next()
 })
 
 export default router
