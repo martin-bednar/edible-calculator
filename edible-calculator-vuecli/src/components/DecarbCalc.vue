@@ -36,6 +36,8 @@
 
               <em class="--small-text message message--neutral">Don't forget to <strong>preheat</strong> the oven to {{userInput.temperature_degC}} °C ({{computed.temperature_degF}} °F) before you put the cannabis inside.</em>
       </p>
+
+      <countdown-timer :input_timespan="Math.round(computed.ideal_time)"/>
     </section>
     <!--Dosage calc guide  / documentation-->
     <edible-article id="decarb-time-calculator"></edible-article>
@@ -61,6 +63,7 @@
 import Article from '@/components/Article.vue'
 import Interpolator from '@/js/Interpolator.js'
 import ValueCoordinates from '@/js/ValueCoordinates.js'
+import CountdownTimer from './CountdownTimer.vue'
 
 import _GAEventHandler from '@/js/GAEvents.js'
 
@@ -123,7 +126,8 @@ export default {
     }
   },
   components: {
-    'edible-article': Article
+    'edible-article': Article,
+    'countdown-timer': CountdownTimer
   }
 }
 </script>

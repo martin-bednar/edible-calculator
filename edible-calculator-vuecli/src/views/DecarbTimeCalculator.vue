@@ -6,7 +6,7 @@
 <script>
 import calculatorDecarb from '@/components/DecarbCalc.vue'
 export default {
-  name: 'Decarb Time Calculator',
+  name: 'decarb-time-calculator',
   metaInfo: {
     title: 'Cannabis decarb time calculator',
     meta: [
