@@ -20,9 +20,6 @@ var router = new Router({
       path: '/decarb-time-calculator',
       name: 'decarb time calculator',
       component: () => import('./views/DecarbTimeCalculator.vue'),
-      meta: {
-        description: 'Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator'
-      }
     },
     {
       path: '/dosage-calculator',
