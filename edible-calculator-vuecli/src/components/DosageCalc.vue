@@ -124,7 +124,7 @@ export default {
   name: 'calculatorDosage',
   mounted: function () {
     DosageSolver = new _DosageSolver()
-    this.GAEventHandler = new _GAEventHandler(this.$ga);
+    this.GAEventHandler = new _GAEventHandler(this.$ga)
   },
   data () {
     return {
@@ -171,10 +171,10 @@ export default {
       } else {
         //
       }
-      
-      if(!this.interaction.userHasInteracted){
-      this.GAEventHandler.SendFirstInteraction({eventLabel: 'Dosage Calculator'});
-      this.interaction.userHasInteracted = true
+
+      if (!this.interaction.userHasInteracted) {
+        this.GAEventHandler.SendFirstInteraction({ eventLabel: 'Dosage Calculator' })
+        this.interaction.userHasInteracted = true
       }
     }
   },
