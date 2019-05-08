@@ -19,7 +19,7 @@ var router = new Router({
     {
       path: '/decarb-time-calculator',
       name: 'decarb time calculator',
-      component: () => import('./views/DecarbTimeCalculator.vue'),
+      component: () => import('./views/DecarbTimeCalculator.vue')
     },
     {
       path: '/dosage-calculator',

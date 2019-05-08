@@ -8,10 +8,10 @@
 </template>
 <script>
 export default {
-    name: '404 error page',
-    metaInfo: {
-        title: 'Oops 🤢'
-    }
+  name: '404 error page',
+  metaInfo: {
+    title: 'Oops 🤢'
+  }
 }
 </script>
 <style scoped>

@@ -10,7 +10,7 @@ export default {
   metaInfo: {
     title: 'Cannabis decarb time calculator',
     meta: [
-      { vmid: 'description', name: "description", content: 'Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator' }
+      { vmid: 'description', name: 'description', content: 'Cannabis decarb time calculator. Easy-to-use tool for creating potent THC-infused edibles. Edible decarboxylation temperature calculator' }
     ]
   },
   components: { calculatorDecarb }
