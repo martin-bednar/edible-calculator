@@ -48,6 +48,7 @@ The project is powered by vue-cli. The base development directory (for running s
  - **raw-loader** for loading markdown files into js.
  - **Babel** as a polyfill.
  - **ES Lint** for automatic linting.
+ - **vue-meta** for smart <head> management.
 ### Front-end:
  - Both **node-sass** and **ruby-sass** for compiling sass->css
  - **PostCSS** for swag 🐱‍👤

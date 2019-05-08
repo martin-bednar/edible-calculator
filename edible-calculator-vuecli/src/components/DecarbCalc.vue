@@ -64,13 +64,12 @@ import ValueCoordinates from '@/js/ValueCoordinates.js'
 
 import _GAEventHandler from '@/js/GAEvents.js'
 
-
 var GAEventHandler
 
 export default {
   name: 'calculatorDecarb',
   mounted: function () {
-    this.GAEventHandler = new _GAEventHandler(this.$ga);
+    this.GAEventHandler = new _GAEventHandler(this.$ga)
   },
   data () {
     return {
@@ -117,9 +116,9 @@ export default {
       this.computed.temperature_degF = computed.tempF
 
       // 7. Send GA Event
-      if(!this.interaction.userHasInteracted){
-      this.GAEventHandler.SendFirstInteraction({eventLabel: 'Decarb Time Calculator'});
-      this.interaction.userHasInteracted = true
+      if (!this.interaction.userHasInteracted) {
+        this.GAEventHandler.SendFirstInteraction({ eventLabel: 'Decarb Time Calculator' })
+        this.interaction.userHasInteracted = true
       }
     }
   },
