@@ -2,8 +2,8 @@
   <div id="countdown">
       <h3>Countdown</h3>
     <div v-if="finished">
-    <button class="btn disabled">Timer finished</button>
-        <button v-on:click="Start" class="btn">Set timer</button>
+    <button class="btn disabled"> Timer finished </button>
+        <button v-on:click="Start" class="btn"> Set timer for {{input_timespan}} minutes </button>
     </div>
     <div v-else>
       <div v-if="started">
@@ -13,11 +13,11 @@
            out of {{countdown.length_minutes}} minutes.
            </div>
         
-        <button class="btn bg-red" v-on:click="Abort">Stop timer</button>
+        <button class="btn red darken-2" v-on:click="Abort"> Stop timer </button>
       </div>
 
       <div v-else>
-        <button v-on:click="Start" class="btn">Set timer for {{input_timespan}} minutes</button>
+        <button v-on:click="Start" class="btn"> Set timer for {{input_timespan}} minutes </button>
       </div>
     </div>
   </div>
